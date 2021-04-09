@@ -20,7 +20,7 @@ export default {
   },
   data(){
     return {
-      name : 'mike lim' ,
+      name : 'WOOM' ,
       items : [
         {
           value : 1,

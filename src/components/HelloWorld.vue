@@ -8,7 +8,9 @@
         <button @click="removeItem(idx)">Remove Item</button>
       </li>
     </ul>
-    <button @click="addItem">Add Item</button>
+    <!-- <button @click="addItem">Add Item</button> -->
+    <button @click="changeName">Change Name</button>
+    <button @click="clearName">Clear Name</button>
   </div>
 </template>
 
@@ -38,15 +40,26 @@ export default {
     }
   },
   methods : {
-    addItem(){
-      let idx = this.items.length + 1;
-      this.items.push({
-        value : idx ,
-        text : 'item ' + idx
-      });
-    },
+    // addItem(){
+    //   let idx = this.items.length + 1;
+    //   this.items.push({
+    //     value : idx ,
+    //     text : 'item ' + idx
+    //   });
+    // },
     removeItem(idx){
       this.items.splice(idx , 1);
+    },
+    changeName(){
+      console.log(this.name);
+      var arr = ['what', 'is', 'your', 'name', 'woom'];
+      function randomName(a){
+        return a[Math.floor(Math.random() * a.length)];
+      }
+      this.name = randomName(arr);
+    },
+    clearName(){
+      this.name = '';
     }
   }
 }

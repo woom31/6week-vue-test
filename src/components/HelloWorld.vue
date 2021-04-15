@@ -52,7 +52,7 @@ export default {
     },
     changeName(){
       console.log(this.name);
-      var arr = ['what', 'is', 'your', 'name', 'woom'];
+      var arr = ['omenn', 'jeong woomin', 'woomin', 'wamoovi', 'woom'];
       function randomName(a){
         return a[Math.floor(Math.random() * a.length)];
       }
